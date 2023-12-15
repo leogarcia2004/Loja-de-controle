@@ -1,0 +1,251 @@
+
+:root{
+    --initial-color--neutral-1: #ccc;
+    --initial-color--neutral-2: #333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'MuseoModerno', cursive;
+    box-sizing: border-box;
+    letter-spacing: 1.5px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+.topo-informacoes{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--initial-color--neutral-1);
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    background-color: var(--initial-color--neutral-1);
+    border-radius: 10px;
+    margin-left: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.menu{
+    display: flex;
+    gap: 60px;
+    margin-right: 80px;
+}
+
+.sobre, .produtos, .contato{
+    cursor: pointer;
+}
+
+.container-principal{
+    padding-top: 30px;
+}
+
+.title-control{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.container-center{
+    color: #fff;
+   width: 1100px;
+   height: 400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "lateral imagem1 imagem2"
+    "lateral imagem1 imagem2"
+    "lateral imagem1 imagem2"
+    "footer footer footer";
+}
+
+.lateral-branco{
+    margin-left: 30px;
+    grid-area: lateral;
+    max-width: 300px;
+    height: 750px;
+    background-color: var(--initial-color--neutral-2);
+    border-radius: 20px;
+}
+
+.list-xbox, .list-play{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.image-control{
+    max-width: 300px;
+    height: 202px;
+    border-radius: 20px;
+    border: transparent;
+    margin-bottom: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.image-control:hover{
+    transform: scale(1.1);
+}
+
+.titulo-imagem{
+    transition: 0.3s ease-in-out;
+}
+
+.titulo-imagem:hover{
+    transform: scale(1.1);
+}
+.control-xbox{
+    grid-area: imagem1;
+}
+
+.control-play{
+    grid-area: imagem2;
+}
+
+.inferior-branco{
+    margin: 0 auto;
+    grid-area: footer;
+    width: 1040px;
+    height: 200px;
+    background-color: var(--initial-color--neutral-2);
+    border-radius: 20px;
+}
+
+.rodape-informacoes{
+    margin-top: 700px;
+    width: 100%;
+    height: 350px;
+    background-color: black;
+    color: var(--initial-color--neutral-1);
+
+    display: grid;
+    grid-template-areas: 
+    "links newsletter contact";
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.links{
+    grid-area: links;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.link{
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.link:hover{
+    color: var(--initial-color--neutral-1);
+    transform: scale(1.1);
+}
+
+.list-link{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+
+.titulo1-footer{
+    margin-top: 70px;
+    margin-bottom: 25px;
+}
+
+.list-link, .titulo1-footer{
+    position: relative;
+    left: 60px;
+}
+.newsletter{
+    grid-area: newsletter;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo2-footer{
+    margin-top: 70px;
+}
+
+#email-footer{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    min-width: 315px;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+#email-footer:focus{
+    outline: none;
+}
+
+.botao{
+    width: 190px;
+    height: 30px;
+    color: var(--initial-color--neutral-1);
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid var(--initial-color--neutral-1);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.botao:hover{
+    transform: scale(1.1);
+}
+
+.contact{
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo3-footer, .endereco, .list-rede{
+    position: relative;
+    right: 50px;
+}
+
+.titulo3-footer{
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.list-rede{
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.rede{
+    filter: invert(0.5);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.rede:hover{
+    transform: scale(1.1);
+}
